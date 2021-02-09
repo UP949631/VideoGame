@@ -37,12 +37,8 @@ public class Player extends GameObject {
 
             GameObject tempObject = handler.object.get(i);
 
-            if(tempObject.getId() == ID.PlayerBullet){
-                if(getBounds().intersects(tempObject.getBounds())){
-
-                    HUD.HEALTH -= 1;
-
-                }
+            if(tempObject.getId() == ID.PlayerBullet && getBounds().intersects(tempObject.getBounds())){
+             HUD.HEALTH -= 1;    
 
             }
 
