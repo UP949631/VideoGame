@@ -51,8 +51,6 @@ public abstract class GameObject {
 
         }
 
-        //System.out.println(bulletDirection);
-
     }
 
 }
