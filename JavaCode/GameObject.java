@@ -6,7 +6,7 @@ public abstract class GameObject {
     protected ID id;
     protected int speedX, speedY;
 
-    public GameObject(int x, int y, ID id){
+    protected GameObject(int x, int y, ID id){
 
         this.x = x;
         this.y = y;
@@ -18,65 +18,25 @@ public abstract class GameObject {
     public abstract void render(Graphics g);
     public abstract Rectangle getBounds();
 
-    public void setX(int x){
+    public void setX(int x){this.x = x;}
 
-        this.x = x;
+    public int getX(){return x;}
 
-    }
+    public void setY(int y){this.y = y;}
 
-    public int getX(){
+    public int getY(){return y;}
 
-        return x;
+    public void setId(ID id){this.id = id;}
 
-    }
+    public ID getId(){return id;}
 
-    public void setY(int y){
+    public void setSpeedX(int speedX){this.speedX = speedX;}
 
-        this.y = y;
+    public int speedX(){return speedX;}
 
-    }
+    public void setSpeedY(int speedY){this.speedY = speedY;}
 
-    public int getY(){
-
-        return y;
-
-    }
-
-    public void setId(ID id){
-
-        this.id = id;
-
-    }
-
-    public ID getId(){
-
-        return id;
-
-    }
-
-    public void setSpeedX(int speedX){
-
-        this.speedX = speedX;
-
-    }
-
-    public int speedX(){
-
-        return speedX;
-
-    }
-
-    public void setSpeedY(int speedY){
-
-        this.speedY = speedY;
-
-    }
-
-    public int speedY(){
-
-        return speedY;
-
-    }
+    public int speedY(){return speedY;}
 
     public synchronized void shoot(Handler handler, String bulletDirection){
 
