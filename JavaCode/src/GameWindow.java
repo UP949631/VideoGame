@@ -4,6 +4,11 @@ import java.awt.*;
 public class GameWindow extends Canvas {
 
 
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
+
     public GameWindow(int width, int height, String title, Game game) {
 
         JFrame frame = new JFrame(title);
