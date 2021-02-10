@@ -3,9 +3,12 @@ import java.awt.image.BufferStrategy;
 
 public class Game extends Canvas implements Runnable{
 
-    /**
-     *
-     */
+    public static void main(String args[]){
+
+        new Game();
+
+    }
+    
     private static final long serialVersionUID = -8830209527649295064L;
     public static final int WIDTH = 1920, HEIGHT = WIDTH / 12 * 9;
     private Thread thread;
@@ -125,11 +128,7 @@ public class Game extends Canvas implements Runnable{
     }
 
 
-    public static void main(String args[]){
 
-        new Game();
-
-    }
 
     public static int clamp(int var, int min, int max){ //Method to ensure values stay within limits e.t.c Health, Position.
 
