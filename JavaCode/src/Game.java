@@ -121,7 +121,7 @@ public class Game extends Canvas implements Runnable{
 
         this.addKeyListener(new KeyInput(handler));
 
-        new Window(WIDTH, HEIGHT, "Dungeon Runner", this);
+        new GameWindow(WIDTH, HEIGHT, "Dungeon Runner", this);
 
         handler.addObject(new Player(WIDTH/2 -32, HEIGHT/2 -32, ID.Player, handler));
 
