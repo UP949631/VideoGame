@@ -20,14 +20,43 @@ public class KeyInput extends KeyAdapter {
     public void keyPressed(KeyEvent e){
 
         int key = e.getKeyCode();
-        //System.out.println(key);
 
         for(int i = 0; i < handler.object.size(); i++){
 
             GameObject tempObject = handler.object.get(i);
 
             if(tempObject.getId() == ID.Player){
-
+                switch (key){
+                    case (KeyEvent.VK_W):
+                        tempObject.setSpeedY(-10);
+                        break;
+                    case(KeyEvent.VK_S):
+                        tempObject.setSpeedY(10);
+                        break;
+                    case(KeyEvent.VK_A):
+                        tempObject.setSpeedX(-10);
+                        break;
+                    case(KeyEvent.VK_D):
+                        tempObject.setSpeedX(10);
+                        break;
+                    case(KeyEvent.VK_UP):
+                        bulletDirection = "up";
+                        tempObject.shoot(handler, bulletDirection);    
+                        break;
+                    case(KeyEvent.VK_DOWN):
+                        bulletDirection = "down";
+                        tempObject.shoot(handler, bulletDirection);  
+                        break;
+                    case(KeyEvent.VK_LEFT):
+                        bulletDirection = "left";
+                        tempObject.shoot(handler, bulletDirection);
+                        break;
+                    case(KeyEvent.VK_RIGHT):
+                        bulletDirection = "right";
+                        tempObject.shoot(handler, bulletDirection);
+                        break;
+                }
+            /*    
                 if(key == KeyEvent.VK_W){tempObject.setSpeedY(-10);} //Movement Controls
                 if(key == KeyEvent.VK_S){tempObject.setSpeedY(10);}
                 if(key == KeyEvent.VK_A){tempObject.setSpeedX(-10);}
@@ -37,19 +66,20 @@ public class KeyInput extends KeyAdapter {
                     bulletDirection = "up";
                     tempObject.shoot(handler, bulletDirection);
                 }
+            
                 if(key == KeyEvent.VK_DOWN) {
                     bulletDirection = "down";
                     tempObject.shoot(handler, bulletDirection);
                 }
                 if(key == KeyEvent.VK_LEFT) {
-                    bulletDirection = "left";
-                    tempObject.shoot(handler, bulletDirection);
+                        bulletDirection = "left";
+                        tempObject.shoot(handler, bulletDirection);
                 }
                 if(key == KeyEvent.VK_RIGHT) {
                     bulletDirection = "right";
                     tempObject.shoot(handler, bulletDirection);
                 }
-
+*/
             }
 
         }
