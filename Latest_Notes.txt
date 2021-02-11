@@ -58,3 +58,7 @@ and leaves it a shell
  manamancer smoker character ally 
 ash particlr effrct the fallen ash boss no physical damage
  the unyielding cold spider web with smol spider 
+
+
+_FIGHT EFFECTS_
+ice cracking visual effect
